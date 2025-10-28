@@ -1,0 +1,367 @@
+/* src/pages/EmergencyDetails.css */
+.emergency-details {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: #f5f7fa;
+}
+
+.details-header {
+  display: flex;
+  align-items: center;
+  padding: 15px 20px;
+  background-color: white;
+  border-bottom: 1px solid #e1e4e8;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  z-index: 10;
+}
+
+.back-button {
+  color: #4a6cf7;
+  font-weight: 600;
+  text-decoration: none;
+  margin-right: 15px;
+  font-size: 16px;
+}
+
+.details-header h1 {
+  color: #2c3e50;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.details-container {
+  display: flex;
+  flex: 1;
+  padding: 20px;
+  gap: 20px;
+}
+
+@media (max-width: 768px) {
+  .details-container {
+    flex-direction: column;
+  }
+}
+
+.details-main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.details-header-info {
+  background-color: white;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.status-indicator {
+  display: inline-block;
+  padding: 6px 12px;
+  border-radius: 4px;
+  font-weight: 600;
+  font-size: 14px;
+  margin-bottom: 15px;
+}
+
+.status-indicator.active {
+  background-color: #fef2f2;
+  color: #b91c1c;
+}
+
+.status-indicator.resolved {
+  background-color: #f0fdf4;
+  color: #166534;
+}
+
+.details-header-info h2 {
+  margin: 0 0 15px 0;
+  color: #2c3e50;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.meta-info {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.meta-info span {
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.priority.high {
+  background-color: #fef2f2;
+  color: #b91c1c;
+}
+
+.priority.medium {
+  background-color: #fff8e1;
+  color: #b45309;
+}
+
+.priority.low {
+  background-color: #f0fdf4;
+  color: #166534;
+}
+
+.category {
+  background-color: #f1f5f9;
+  color: #64748b;
+  text-transform: capitalize;
+}
+
+.reported-by {
+  background-color: #f1f5f9;
+  color: #64748b;
+}
+
+.reported-at {
+  background-color: #f1f5f9;
+  color: #64748b;
+}
+
+.details-section {
+  background-color: white;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.details-section h3 {
+  margin: 0 0 15px 0;
+  color: #2c3e50;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.details-section p {
+  margin: 0 0 15px 0;
+  color: #64748b;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.location-info {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.location-map {
+  height: 200px;
+  background-color: #e2e8f0;
+  border-radius: 8px;
+  overflow: hidden;
+  position: relative;
+}
+
+.map-placeholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #a8d8ea 0%, #ffffff 100%);
+}
+
+.map-coordinates {
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 8px 12px;
+  border-radius: 4px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  font-weight: 600;
+  color: #2c3e50;
+}
+
+.location-details p {
+  margin: 0;
+}
+
+.directions-btn {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 8px 16px;
+  background-color: #4a6cf7;
+  color: white;
+  border-radius: 4px;
+  font-weight: 500;
+  text-align: center;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.directions-btn:hover {
+  background-color: #3a5bd9;
+}
+
+.resolution-info {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.resolution-info p {
+  margin: 0;
+}
+
+.action-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.action-btn {
+  padding: 10px 20px;
+  border-radius: 6px;
+  font-weight: 600;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.action-btn.primary {
+  background-color: #4a6cf7;
+  color: white;
+}
+
+.action-btn.primary:hover {
+  background-color: #3a5bd9;
+}
+
+.action-btn.secondary {
+  background-color: #f1f5f9;
+  color: #475569;
+  border: 1px solid #e2e8f0;
+}
+
+.action-btn.secondary:hover {
+  background-color: #e2e8f0;
+}
+
+.details-sidebar {
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+@media (max-width: 768px) {
+  .details-sidebar {
+    width: 100%;
+  }
+}
+
+.info-card {
+  background-color: white;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.info-card h3 {
+  margin: 0 0 15px 0;
+  color: #2c3e50;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.info-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+  border-bottom: 1px solid #f1f5f9;
+}
+
+.info-item:last-child {
+  border-bottom: none;
+}
+
+.info-label {
+  color: #64748b;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.info-value {
+  color: #2c3e50;
+  font-size: 14px;
+  font-weight: 600;
+  text-align: right;
+  max-width: 60%;
+}
+
+.info-value.status.active {
+  color: #b91c1c;
+}
+
+.info-value.status.resolved {
+  color: #166534;
+}
+
+
+/* Add to src/pages/EmergencyDetails.css */
+
+.directions-btn {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 8px 16px;
+  background-color: #4a6cf7;
+  color: white;
+  border-radius: 4px;
+  font-weight: 500;
+  text-align: center;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.directions-btn:hover {
+  background-color: #3a5bd9;
+}
+
+.location-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 10px;
+  padding: 8px 16px;
+  background-color: #f1f5f9;
+  color: #475569;
+  border: 1px solid #e2e8f0;
+  border-radius: 4px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.location-btn:hover {
+  background-color: #e2e8f0;
+}
+
+.location-btn:disabled {
+  background-color: #f8fafc;
+  cursor: not-allowed;
+}
+
+.location-icon {
+  font-size: 16px;
+}
+
+/* Emergency location marker */
+.emergency-location-marker {
+  border: none !important;
+  background: transparent !important;
+}
+
+/* User location marker */
+.user-location-marker {
+  border: none !important;
+  background: transparent !important;
+}

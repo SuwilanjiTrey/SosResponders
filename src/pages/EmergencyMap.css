@@ -1,0 +1,191 @@
+/* src/pages/EmergencyMap.css */
+.emergency-map-simple {
+  padding: 1rem;
+  max-width: 1000px;
+  margin: 0 auto;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+.map-header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.back-button {
+  text-decoration: none;
+  color: #4a6cf7;
+  font-weight: 600;
+}
+
+.map-header h1 {
+  margin: 0;
+  font-size: 1.8rem;
+}
+
+.location-controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+  align-items: center;
+}
+
+.location-btn {
+  padding: 0.4rem 0.8rem;
+  background: #4a6cf7;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.location-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.user-location {
+  background: #e0f2fe;
+  padding: 0.3rem 0.6rem;
+  border-radius: 6px;
+  font-size: 0.95rem;
+}
+
+.error-message {
+  color: #d32f2f;
+  background: #ffebee;
+  padding: 0.6rem;
+  border-radius: 6px;
+  margin-top: 0.5rem;
+  border-left: 4px solid #f44336;
+}
+
+.emergency-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.emergency-card {
+  border: 1px solid #e0e0e0;
+  border-radius: 10px;
+  padding: 1.2rem;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+  background: white;
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 0.8rem;
+}
+
+.card-header h3 {
+  margin: 0;
+  font-size: 1.3rem;
+}
+
+.priority-badge {
+  padding: 0.25rem 0.7rem;
+  border-radius: 20px;
+  color: white;
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.priority-badge.high { background: #d32f2f; }
+.priority-badge.medium { background: #ed6c02; }
+.priority-badge.low { background: #2e7d32; }
+
+.description {
+  color: #424242;
+  margin: 0.6rem 0;
+  line-height: 1.5;
+}
+
+.map-preview {
+  margin: 1rem 0;
+  position: relative;
+  min-height: 200px;
+  border-radius: 8px;
+  overflow: hidden;
+  background: #f5f5f5;
+}
+
+.static-map {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.map-fallback {
+  padding: 1rem;
+  text-align: center;
+  color: #555;
+}
+
+.view-on-osm {
+  display: inline-block;
+  margin-top: 0.5rem;
+  color: #4a6cf7;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.view-on-osm:hover {
+  text-decoration: underline;
+}
+
+.card-footer {
+  margin-top: 1rem;
+}
+
+.meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+  margin-bottom: 1rem;
+  color: #616161;
+}
+
+.card-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.7rem;
+}
+
+.btn {
+  padding: 0.6rem 1.2rem;
+  border: none;
+  border-radius: 6px;
+  text-decoration: none;
+  display: inline-block;
+  font-weight: 600;
+  cursor: pointer;
+  text-align: center;
+  min-width: 120px;
+}
+
+.btn.view-details {
+  background: #4a6cf7;
+  color: white;
+}
+
+.btn.get-directions {
+  background: #2e7d32;
+  color: white;
+}
+
+.no-emergencies {
+  text-align: center;
+  color: #666;
+  font-style: italic;
+  padding: 2rem;
+  font-size: 1.1rem;
+}

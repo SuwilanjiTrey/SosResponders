@@ -1,0 +1,21 @@
+@font-face {
+  font-family: 'Dune';
+  src: url('./Dune_Rise.ttf') format('truetype');
+       
+  font-weight: normal;
+  font-style: normal;
+}
+
+h1 {
+  font-family: 'Dune';
+}
+
+/* Light Mode Gradient Effect */
+@media (prefers-color-scheme: light) {
+  h1 {
+    color: transparent;
+    background-image: linear-gradient(90deg, #111, #333, #555);
+    background-clip: text;
+    -webkit-background-clip: text;
+  }
+}
