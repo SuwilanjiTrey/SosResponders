@@ -1,0 +1,16 @@
+@keyframes borderRotate {
+  0% {
+    background-position: 0% center;
+  }
+  100% {
+    background-position: -200% center;
+  }
+}
+
+.navbarBorder {
+  background: linear-gradient(90deg, #a855f7, #06b6d4, #a855f7);
+  background-size: 200% auto;
+  animation: borderRotate 3s linear infinite;
+  border-radius: 9999px; /* Ensures full-rounding */
+	padding: 2px;
+}
